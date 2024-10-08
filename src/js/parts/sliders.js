@@ -7,28 +7,21 @@ if (sliders.length) {
         const section = slider.closest('section');
         let prev = section.querySelector('.prev')
         let next = section.querySelector('.next')
+        let pagination = section.querySelector('.pagination')
 
-        if (slider.closest('.advantages')) {
+        if (slider.closest('.hero')) {
             new Swiper(slider, {
-                modules: [Autoplay, Navigation],
-                slidesPerView: 'auto',
-                autoplay: {
-                    delay: 3000,
-                    pauseOnMouseEnter: true
-                },
+                modules: [Autoplay, Navigation, Pagination],
+                slidesPerView: 1,
                 navigation: {
                     prevEl: prev,
                     nextEl: next,
                 },
-                grabCursor: true,
-                breakpoints: {
-                    300: {
-                        spaceBetween: 20
-                    },
-                    1025: {
-                        spaceBetween: 30
-                    },
-                }
+                pagination: {
+                    el: pagination,
+                    type: 'bullets',
+                    clickable: true,
+                },
             })
         }
 

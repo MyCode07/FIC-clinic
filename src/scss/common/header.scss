@@ -1,0 +1,269 @@
+.header {
+    // .header__container
+
+    &__container {
+    }
+
+    // .header__body
+
+    &__body {
+    }
+
+    // .header__top
+
+    &__top {
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        * {
+            color: $black;
+        }
+
+        ol {
+            display: flex;
+            gap: 50px;
+
+            li {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-weight: 500;
+                }
+
+                a,
+                span {
+                }
+            }
+        }
+    }
+
+    // .header__logo
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        a {
+            width: 117px;
+            height: 100px;
+        }
+
+        span {
+            color: $black;
+            font-size: 17px;
+            font-weight: 500;
+            text-transform: uppercase;
+            width: 169px;
+        }
+    }
+
+    // .header__search
+
+    &__search {
+        width: 24px;
+        height: 24px;
+
+        img,
+        svg {
+            pointer-events: none;
+        }
+    }
+
+    // .header__bottom
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
+
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            transform: translate(-50%, 0);
+            top: 0;
+            width: 100vw;
+            height: 100%;
+            pointer-events: none;
+            background-color: $light-blue;
+            z-index: -1;
+        }
+
+        nav {
+            width: 100%;
+
+            ul {
+                li {
+                    gap: 10px;
+
+                    a {
+                        color: $white;
+                        font-size: 17px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        transition: opacity 0.3s ease 0s;
+                    }
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            & > a {
+                                opacity: 0.5;
+                            }
+
+                            button {
+                                img,
+                                svg {
+                                    transform: rotate(180deg);
+                                }
+                            }
+
+                            .div {
+                                pointer-events: all;
+                            }
+                        }
+                    }
+
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        width: 24px;
+                        height: 24px;
+                        flex: 0 0 auto;
+                        position: relative;
+                        z-index: 1;
+
+                        img,
+                        svg {
+                            width: 14px;
+                            height: 14px;
+                            stroke: currentColor;
+                            transition: transform 0.3s ease 0s;
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+
+            & > ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+
+                & > :last-child {
+                    grid-column-start: 2;
+                }
+
+                & > li {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    position: relative;
+
+                    a {
+                        white-space: nowrap;
+                        display: flex;
+                        align-self: center;
+                    }
+
+                    &[data-open] {
+                        button {
+                            img,
+                            svg {
+                                transform: rotate(-180deg);
+                            }
+                        }
+
+                        div {
+                            overflow: visible;
+                            opacity: 1;
+                            pointer-events: all;
+                            visibility: visible;
+                            max-height: fit-content;
+                            height: auto;
+                        }
+                    }
+
+                    &:nth-child(n + 4) {
+                        & > div {
+                            left: unset;
+                            right: 0;
+                        }
+                    }
+
+                    & > div {
+                        position: absolute;
+                        top: 50px;
+                        left: 0;
+                        width: 500px;
+                        background-color: $light-blue;
+                        height: auto;
+
+                        pointer-events: none;
+                        height: 0;
+                        overflow: hidden;
+                        z-index: 2;
+
+                        & > ul {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 30px;
+                            padding: 15px;
+
+                            & > li {
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr);
+                                width: 100%;
+                                position: relative;
+
+                                button {
+                                    margin-left: auto;
+                                }
+
+                                a {
+                                    white-space: wrap;
+                                }
+
+                                & > div {
+                                    height: auto;
+                                    pointer-events: none;
+                                    height: 0;
+                                    overflow: hidden;
+                                    grid-column: span 2;
+
+                                    & > ul {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 10px;
+                                        padding-left: 15px;
+
+                                        li {
+                                            a {
+                                                white-space: wrap;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // .header__burger
+
+    &__burger {
+        display: none;
+    }
+}

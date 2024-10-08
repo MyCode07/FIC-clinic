@@ -44,7 +44,8 @@ if (allMenuLinks.length) {
 
 
 // menu arrow buttom
-const arrow = `<button><svg class="catalog-arrow" width="12" height="7" viewBox="0 0 12 7" fill="none"><path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.25"/></svg></button>`;
+const arrow = `<button><svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M15.1421 1L8.07107 8.07107L1 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+</button>`;
 
 // add menu summenu opener button
 const submenuList = document.querySelectorAll('nav ul li');
