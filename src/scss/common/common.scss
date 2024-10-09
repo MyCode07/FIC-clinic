@@ -61,12 +61,17 @@ h1 {
     font-weight: 600;
 }
 
+.h2,
 h2 {
     color: $black;
     @include adaptive-value("font-size", 32, 24, 1);
     font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 30px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 15px;
+    }
 }
 
 h4 {
@@ -89,6 +94,13 @@ p {
 
     font-size: 20px;
     font-weight: 500;
+    transition: opacity 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 
     @media (max-width: 1024px) {
         font-size: 18px;
@@ -100,6 +112,26 @@ p {
     &-blue {
         color: $white;
         background-color: $light-blue;
+    }
+}
+
+._secondary-button {
+    display: flex;
+    align-items: center;
+    color: $white;
+    transition: opacity 0.3s ease 0s;
+
+    svg,
+    img {
+        fill: currentColor;
+        height: 8px;
+        width: fit-content;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.7;
+        }
     }
 }
 
@@ -209,6 +241,13 @@ input[type="number"] {
         padding: 25px 30px;
         gap: 30px;
         background-color: #f5f6fa;
+        margin-bottom: 15px;
+
+        @media (max-width: 1024px) {
+            gap: 15px;
+            padding: 15px;
+            overflow-y: auto;
+        }
 
         button {
             display: flex;
@@ -218,12 +257,16 @@ input[type="number"] {
             padding: 0px 30px;
             background-color: $white;
             transition: all 0.3s ease 0s;
+            white-space: nowrap;
 
             color: $black;
             font-size: 20px;
             font-weight: 500;
+
             @media (max-width: 1024px) {
                 font-size: 18px;
+                height: 40px;
+                padding: 0 15px;
             }
 
             &._active {
@@ -239,16 +282,27 @@ input[type="number"] {
         display: flex;
         align-items: center;
         gap: 30px;
-        margin-bottom: 30px;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+
+        @media (max-width: 1024px) {
+            gap: 15px;
+            overflow-y: auto;
+        }
 
         button {
             color: $gray;
             font-size: 20px;
             font-weight: 500;
-            transition: all 0.3s ease 0s;
+            transition: color 0.3s ease 0s;
+            white-space: nowrap;
 
             @media (max-width: 1024px) {
                 font-size: 18px;
+            }
+
+            &._active {
+                color: $black;
             }
         }
     }
@@ -256,11 +310,16 @@ input[type="number"] {
 
     &-content {
         display: flex;
-        padding: 25px 31px;
+        padding: 25px 30px;
         background-color: #f5f6fa;
+
+        @media (max-width: 1024px) {
+            padding: 15px;
+        }
 
         [data-tab-content] {
             display: none;
+            width: 100%;
 
             &._active {
                 display: block;
@@ -285,6 +344,7 @@ input[type="number"] {
                         transition: opacity 0.3s ease 0s;
                         opacity: 0;
                         width: 14px;
+                        height: 9px;
                     }
                 }
 
@@ -303,25 +363,4 @@ input[type="number"] {
             }
         }
     }
-}
-
-.tabs div {
-    display: none;
-    padding: 20px 0 0;
-    border: none;
-}
-
-.tabs input {
-    display: none;
-}
-
-.tabs input:checked + label {
-    color: #555;
-}
-
-.tabs #tab1:checked ~ #content1,
-.tabs #tab2:checked ~ #content2,
-.tabs #tab3:checked ~ #content3,
-.tabs #tab4:checked ~ #content4 {
-    display: block;
 }

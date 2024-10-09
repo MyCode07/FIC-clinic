@@ -24,48 +24,56 @@ if (sliders.length) {
                 },
             })
         }
-
-        if (slider.closest('.team')) {
+        if (slider.closest('.consultations')) {
             new Swiper(slider, {
-                modules: [Navigation],
+                modules: [Autoplay, Navigation, Pagination],
+                slidesPerView: 3,
+                spaceBetween: 20,
                 navigation: {
                     prevEl: prev,
                     nextEl: next,
                 },
-                grabCursor: true,
+                pagination: {
+                    el: pagination,
+                    type: 'bullets',
+                    clickable: true,
+                },
                 breakpoints: {
                     300: {
-                        spaceBetween: 20,
-                        slidesPerView: 'auto',
+                        slidesPerView: 1,
+                    },
+                    500: {
+                        slidesPerView: 2,
                     },
                     1025: {
-                        spaceBetween: 30,
                         slidesPerView: 3,
                     },
                 }
             })
         }
-
-        if (slider.closest('.reviews')) {
+        if (slider.closest('.video')) {
             new Swiper(slider, {
-                modules: [Autoplay, Navigation],
-                autoplay: {
-                    delay: 3000,
-                    pauseOnMouseEnter: true
-                },
+                modules: [Autoplay, Navigation, Pagination],
+                slidesPerView: 4,
+                spaceBetween: 20,
                 navigation: {
                     prevEl: prev,
                     nextEl: next,
                 },
-                grabCursor: true,
+                pagination: {
+                    el: pagination,
+                    type: 'bullets',
+                    clickable: true,
+                },
                 breakpoints: {
                     300: {
-                        spaceBetween: 20,
-                        slidesPerView: 'auto',
+                        slidesPerView: 2,
+                    },
+                    500: {
+                        slidesPerView: 3,
                     },
                     1025: {
-                        spaceBetween: 30,
-                        slidesPerView: 2,
+                        slidesPerView: 4,
                     },
                 }
             })
