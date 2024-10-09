@@ -63,6 +63,7 @@ h1 {
 
 .h2,
 h2 {
+    display: block;
     color: $black;
     @include adaptive-value("font-size", 32, 24, 1);
     font-weight: 500;
@@ -167,6 +168,10 @@ input[type="number"] {
     gap: 15px;
     width: fit-content;
 
+    @media (max-width: 1024px) {
+        gap: 10px;
+    }
+
     button {
         display: flex;
         align-items: center;
@@ -194,6 +199,10 @@ input[type="number"] {
     display: flex;
     align-items: center;
     gap: 15px;
+
+    @media (max-width: 1024px) {
+        gap: 10px;
+    }
 
     span {
         background-color: $blue;
@@ -223,11 +232,39 @@ input[type="number"] {
     }
 }
 
+.swiper-scrollbar {
+    height: 8px;
+    margin-top: 30px;
+    background-color: rgba($color: $light-blue, $alpha: 0.2);
+
+    .swiper-scrollbar-drag {
+        height: 100%;
+        background-color: $light-blue;
+        border-radius: 20px;
+    }
+}
+
 [data-tab-content] {
     display: none;
 
     &._active {
         display: block;
+    }
+}
+
+.pages-tabs {
+    .section__body {
+        padding: 25px 30px;
+        background-color: #f5f6fa;
+
+        @media (max-width: 1024px) {
+            padding: 15px;
+        }
+    }
+
+    .tabs-content {
+        padding: 0 !important;
+        background-color: unset;
     }
 }
 
@@ -325,39 +362,137 @@ input[type="number"] {
                 display: block;
             }
         }
+    }
+}
 
-        ul {
+.breadcrumbs {
+    padding: 30px 0;
+
+    @media (max-width: 1024px) {
+        padding: 15px 0;
+    }
+
+    .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
+            align-items: center;
+            gap: 5px;
 
-            li {
+            color: $gray;
+            font-size: 12px;
+            font-weight: 500;
+            white-space: nowrap;
+
+            & > .active {
+                color: $dark-blue;
+            }
+        }
+    }
+}
+
+.text-box {
+    padding-bottom: 60px;
+
+    @media (max-width: 1024px) {
+        padding-bottom: 30px;
+    }
+
+    font-size: 20px;
+
+    @media (max-width: 1024px) {
+        font-size: 14px;
+    }
+
+    ol {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        li {
+            display: flex;
+            gap: 10px;
+            color: $black;
+            font-size: 20px;
+            padding-left: 10px;
+
+            @media (max-width: 1024px) {
+                font-size: 14px;
+                gap: 5;
+            }
+
+            &:before {
+                position: relative;
+                display: block;
+                content: "";
+                top: 0.5em;
+                flex: 0 0 auto;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background-color: $black;
+            }
+        }
+    }
+
+    ._stroke-top {
+        display: block;
+        padding-top: 20px;
+        border-top: 1px solid #cfe4f1;
+    }
+}
+
+._directions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &.subdirection-links {
+        padding: 25px 30px;
+        background-color: #f5f6fa;
+        margin-top: 50px;
+
+        @media (max-width: 1024px) {
+            padding: 15px;
+            margin-top: 25px;
+        }
+
+      
+    }
+
+    li {
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: $gray;
+            transition: color 0.3s ease 0s;
+
+            svg,
+            img {
+                transition: opacity 0.3s ease 0s;
+                opacity: 0;
+                width: 14px;
+                height: 9px;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
                 a {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    color: $gray;
-                    transition: color 0.3s ease 0s;
+                    color: $black;
 
                     svg,
                     img {
-                        transition: opacity 0.3s ease 0s;
-                        opacity: 0;
-                        width: 14px;
-                        height: 9px;
-                    }
-                }
-
-                @media (any-hover: hover) {
-                    &:hover {
-                        a {
-                            color: $black;
-
-                            svg,
-                            img {
-                                opacity: 1;
-                            }
-                        }
+                        opacity: 1;
                     }
                 }
             }

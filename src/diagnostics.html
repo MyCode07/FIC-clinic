@@ -1,0 +1,154 @@
+@@include('./html/head.html', {
+"title":"Диагностика",
+})
+
+@@include('./html/header.html')
+
+<main>
+
+    <section class="section pages-hero diagnostic">
+        <div class="section__container _container">
+            <div class="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a>
+                            <span>Клиника</span>
+                        </a>
+                        <div>/</div>
+                    </li>
+                    <li>
+                        <a>
+                            <span>Стационар</span>
+                        </a>
+                        <div>/</div>
+                    </li>
+                    <li>
+                        <a>
+                            <span>Детское отделение</span>
+                        </a>
+                        <div>/</div>
+                    </li>
+                    <li class="active"><span>Отделение педиатрической гастроэнтерологии, гепатологии и
+                            диетотерапии</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="section__body">
+                <h1>Диагностика</h1>
+                <div class="section__flex">
+                    <img class="bgi" src="img/pages-hero-bgi.png" alt="">
+                    <div class="section__flex-left">
+                        <span>«Красивая цитата от заведубщей отделением в несколько строк»</span>
+                        <p>
+                            <b>Стародубова Антонина Владимировна</b>
+                            <label>Заведующая отделением</label> <br>
+                            Врач высшей категории, специализация - кардиология, терапия, диетология, УЗИ-диагностика
+                        </p>
+                    </div>
+                    <div class="section__flex-right">
+                        <img src="img/doc.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/doctors.html', {})
+
+    <section class="section text-box">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h2>Об отделении</h2>
+                <p>Отделение нутрициологической диагностики включает в себя все виды эндоскопических и лучевых методов
+                    обследования и
+                    оснащено новым современным оборудованием.Находясь на обследовании и лечении  в клинике, все
+                    пациенты, а также
+                    амбулаторные пациенты клиники могут получить качественное обследование всех органов и систем.</p>
+                <br>
+                <ol>
+                    <li>Головного мозга, костей основания и свода черепа и сосудов мозга.</li>
+                    <li>Придаточных пазух носа.</li>
+                    <li>Пирамид височных костей.</li>
+                    <li>Шеи, гортани и магистральных артерий шеи.</li>
+                    <li>Органов и сосудов грудной клетки.</li>
+                    <li>Органов и сосудов брюшной полости и забрюшинного пространтства.</li>
+                    <li>Органов и костей  малого таза.</li>
+                    <li>Костно-суставной системы, включая все крупные суставы и все отделы позвоночника.</li>
+                    <li>КТ-коронарографию.</li>
+                    <li>Виртуальную гастроскопию и колоноскопию.</li>
+                </ol>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section internal-directions">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h2>направления</h2>
+                <div class="grid grid-2">
+                    <div class="internal-directions__card">
+                        <a href="" class="internal-directions__card-image">
+                            <img src="img/internal-directions-1.png" alt="">
+                        </a>
+                        <div class="internal-directions__card-name">Рентген</div>
+                        <a href="" class="_secondary-button">
+                            <span>Подробнее</span>
+                            <svg width="31" height="8" viewBox="0 0 31 8">
+                                <use xlink:href="img/svg/icons.svg#right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="internal-directions__card">
+                        <a href="" class="internal-directions__card-image">
+                            <img src="img/internal-directions-2.png" alt="">
+                        </a>
+                        <div class="internal-directions__card-name">КТ</div>
+                        <a href="" class="_secondary-button">
+                            <span>Подробнее</span>
+                            <svg width="31" height="8" viewBox="0 0 31 8">
+                                <use xlink:href="img/svg/icons.svg#right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="internal-directions__card">
+                        <a href="" class="internal-directions__card-image">
+                            <img src="img/internal-directions-3.png" alt="">
+                        </a>
+                        <div class="internal-directions__card-name">УЗИ</div>
+                        <a href="" class="_secondary-button">
+                            <span>Подробнее</span>
+                            <svg width="31" height="8" viewBox="0 0 31 8">
+                                <use xlink:href="img/svg/icons.svg#right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="internal-directions__card">
+                        <a href="" class="internal-directions__card-image">
+                            <img src="img/internal-directions-4.png" alt="">
+                        </a>
+                        <div class="internal-directions__card-name">Эндоскопия</div>
+                        <a href="" class="_secondary-button">
+                            <span>Подробнее</span>
+                            <svg width="31" height="8" viewBox="0 0 31 8">
+                                <use xlink:href="img/svg/icons.svg#right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="section blue-contacts">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h2>Контакты</h2>
+                <p>По вопросам госпитализации обращайтесь по телефону:</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

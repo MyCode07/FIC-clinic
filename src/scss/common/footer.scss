@@ -10,19 +10,25 @@
     &__body {
         * {
             color: $white;
-            font-size: 14px;
         }
     }
 
     // .footer__top
 
     &__top {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
         padding: 60px 0;
 
         @media (max-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
             padding: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 40px;
         }
 
         label {
@@ -38,6 +44,13 @@
         // .footer__top-left
 
         &-left {
+            @media (max-width: 1024px) and (min-width: 769px) {
+                display: flex;
+                grid-column: span 3;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
             p {
                 font-weight: 500;
             }
@@ -56,9 +69,13 @@
 
     &__logo {
         display: block;
-        width: 246px;
-        height: 212px;
         margin-bottom: 80px;
+        @include adaptive-value("width", 246, 146, 1);
+        @include adaptive-value("height", 212, 112, 1);
+
+        @media (max-width: 1024px) {
+            margin-bottom: 40px;
+        }
 
         svg,
         img {
@@ -75,17 +92,66 @@
         justify-content: space-between;
         gap: 20px;
         padding: 30px 0;
-        background-color: $dark-blue;
+
+        position: relative;
+
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100%;
+            background-color: $dark-blue;
+        }
 
         a {
             display: flex;
             gap: 15px;
+            position: relative;
+            z-index: 1;
+
+            @media (max-width: 1024px) and (min-width: 426px) {
+                max-width: 300px;
+                width: 100%;
+            }
 
             div {
                 display: flex;
                 flex-direction: column;
                 gap: 6px;
             }
+
+            ._btn {
+                height: 20px;
+            }
+
+            span {
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 0.4px;
+                text-transform: uppercase;
+            }
+
+            img,
+            svg {
+                width: 68px;
+                height: fit-content;
+                object-fit: contain;
+
+                @media (max-width: 1024px) {
+                    width: 50px;
+                }
+            }
+        }
+
+        ._btn {
+            font-size: 12px !important;
         }
     }
 
