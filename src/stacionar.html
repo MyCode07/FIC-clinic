@@ -63,7 +63,7 @@
                 </div>
                 <div class="tabs-content">
                     <div data-tab-content="1" class="_active">
-                        <ul>
+                        <ul class="_directions">
                             <li>
                                 <a href=""><span>Отделение гастроэнтерологии, гепатологии и
                                         диетотерапии</span><img src="img/icons/right-arrow.svg" alt=""></a>
@@ -109,7 +109,6 @@
                     <div data-tab-content="3">
                         <p>Взрослые отделения
                             Детское отделение
-
                         </p>
                     </div>
                 </div>
@@ -117,81 +116,10 @@
         </div>
     </section>
 
-    <section class="section types">
-        <div class="section__container _container">
-            <div class="section__body">
-                <h2>Виды госпитализации</h2>
-                <div class="grid grid-3">
-                    <div class="types-card">
-                        <span class="h2">на бюджетной основе</span>
-                        <ol>
-                            <li>ОМС</li>
-                            <li>ВМП</li>
-                        </ol>
-                    </div>
-                    <div class="types-card">
-                        <span class="h2">по научной тематике отделенийе</span>
-                        <p>Разработка эффективных методов профилактики и лечения алиментарно-зависимых заболеваний</p>
-                    </div>
-                    <div class="types-card">
-                        <span class="h2">на коммерческой основе</span>
-                        <ol>
-                            <li>для физических лиц: ДМС, ПМУ</li>
-                            <li>для юридических лиц: клинические исследования пищевых продуктов, БАД и СПП</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="section gallery">
-        <div class="section__container _container">
-            <div class="section__body">
-                <h2>Фотогалерея</h2>
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="gallery-card">
-                                <img src="img/hero-bgi.png" alt="">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="gallery-card">
-                                <img src="img/hero-bgi.png" alt="">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="gallery-card">
-                                <img src="img/hero-bgi.png" alt="">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="gallery-card">
-                                <img src="img/hero-bgi.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="navigation">
-                    <button class="prev">
-                        <svg width="31" height="8" viewBox="0 0 31 8">
-                            <use xlink:href='img/svg/icons.svg#slider-prev-arrow' />
-                        </svg>
-                    </button>
+    @@include('./html/types.html', {})
 
-                    <div class="pagination">
-                    </div>
-
-                    <button class="next">
-                        <svg width="31" height="8" viewBox="0 0 31 8">
-                            <use xlink:href='img/svg/icons.svg#slider-next-arrow' />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('./html/gallery.html', {})
 
     @@include('./html/consulting.html', {})
 

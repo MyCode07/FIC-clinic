@@ -1,0 +1,103 @@
+@@include('./html/head.html', {
+"title":"Лаборатория",
+})
+
+@@include('./html/header.html')
+
+<main>
+    <section class="section pages-hero ">
+        <div class="section__container _container">
+            <div class="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a>
+                            <span>Клиника</span>
+                        </a>
+                        <div>/</div>
+                    </li>
+                    <li class="active"><span>Лаборатория</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="section__body">
+                <h1>Лаборатория клинической биохимии, иммунологии и
+                    аллергологии</h1>
+                <div class="section__flex">
+                    <img class="bgi" src="img/pages-hero-bgi.png" alt="">
+                    <div class="section__flex-left">
+                        <span>«Красивая цитата от заведубщей отделением в несколько строк»</span>
+                        <p>
+                            <b>Короткова Татьяна Николаевна</b>
+                            <label>Заведующая отделением</label>
+                            заведующий лабораторией, к.м.н. <br>
+                            Специализация – врач лабораторной диагностики высшей квалификационной
+                            категории
+                        </p>
+                    </div>
+                    <div class="section__flex-right">
+                        <img src="img/doc.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/doctors.html', {})
+
+    <section class="section laboratory">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h2>Направления</h2>
+                <div class="grid grid-3">
+                    <div class="laboratory-card">
+                        <span class="h2">аллергодиагностика</span>
+                        <p>Широкий спектр аллергодиагностики in vitro к различным
+                            пыльцевым, бытовым, клещевым, грибковым и пищевым аллергенам
+                            (исследуются более 300 видов аллергенов).</p>
+                    </div>
+                    <div class="laboratory-card">
+                        <span class="h2">Истинная ааллергия</span>
+                        <p>Диагностируем истинную аллергию и пищевую непереносимость</p>
+                    </div>
+                    <div class="laboratory-card">
+                        <span class="h2">иммунный статус</span>
+                        <p>Проводим исследования иммунного статуса</p>
+                    </div>
+                    <div class="laboratory-card">
+                        <span class="h2">Другие болезни</span>
+                        <p>Осуществляем диагностику нефропатий, ревматических болезней,
+                            нарушений метаболизма, анемий, атеросклероза и болезней сердца</p>
+                    </div>
+                    <div class="laboratory-card">
+                        <span class="h2">Вирусы</span>
+                        <p>Проводим молекулярно-генетические исследования различных
+                            вирусных инфекций.</p>
+                    </div>
+                    <div class="laboratory-card">
+                        <span class="h2">Генетика</span>
+                        <p>Проводим генетические исследования.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section blue-contacts">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h2>Контакты</h2>
+                <p>По вопросам госпитализации обращайтесь по телефону 8 (499) 613-16-44. <br><br>
+                    Консультирование по коммерческим программам диагностики осуществляет научный сотрудник Залетова
+                    Татьяна Сергеевна. <br><br>
+                    Прием звонков по вопросам госпитализации ведется ежедневно по рабочим дням с 10:00 до 16:00. <br>
+                    Запрос на госпитализацию и
+                    вопросы можно направить на почту КОРПОРАТИВНЫЙ АДРЕС?
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

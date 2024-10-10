@@ -11,6 +11,10 @@ section {
         padding-top: 0 !important;
     }
 
+    &._mt-0 {
+        margin-top: 0 !important;
+    }
+
     .section__bgi {
         position: absolute;
         left: 0;
@@ -46,33 +50,31 @@ section {
             flex-direction: column;
         }
 
+        ul:has(li),
+        ol:has(li) {
+            padding-left: 1.5em;
+        }
+
+        ol li {
+            list-style: initial;
+        }
+
+        ul li {
+            list-style: numeric;
+        }
+
         ol {
             display: flex;
             flex-direction: column;
             gap: 5px;
 
             li {
-                display: flex;
-                gap: 10px;
                 color: $black;
-                font-size: 16px;
-                padding-left: 10px;
+                font-size: 20px;
 
                 @media (max-width: 1024px) {
                     font-size: 14px;
                     gap: 5;
-                }
-
-                &:before {
-                    position: relative;
-                    display: block;
-                    content: "";
-                    top: 0.5em;
-                    flex: 0 0 auto;
-                    width: 3px;
-                    height: 3px;
-                    border-radius: 50%;
-                    background-color: $black;
                 }
             }
         }
@@ -97,9 +99,6 @@ section {
 
     &__tabs {
     }
-}
-
-.directions {
 }
 
 .consultations {
@@ -262,6 +261,8 @@ section {
 }
 
 .info {
+    padding-bottom: 30px;
+
     .section__flex {
         padding: 30px 0;
         &:not(:last-child) {
@@ -294,6 +295,34 @@ section {
 
         .h2 {
             margin-bottom: 10px;
+        }
+    }
+
+    .section__flex-right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            padding: 18px 20px;
+            gap: 10px;
+            border: 1px solid #cfe4f1;
+            background-color: $white;
+
+            img {
+                height: 273px;
+                @media (max-width: 1024px) {
+                    height: 150px;
+                }
+            }
+
+            p {
+                color: $black;
+                font-size: 11px;
+                font-style: italic;
+            }
         }
     }
 }
