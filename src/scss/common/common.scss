@@ -86,6 +86,19 @@ p {
     font-weight: 400;
 }
 
+ul:has(li),
+ol:has(li) {
+    padding-left: 1.5em;
+}
+
+ol li {
+    list-style: initial;
+}
+
+ul li {
+    list-style: numeric;
+}
+
 ._btn {
     display: flex;
     align-items: center;
@@ -464,8 +477,6 @@ input[type="number"] {
             padding: 15px;
             margin-top: 25px;
         }
-
-      
     }
 
     li {
