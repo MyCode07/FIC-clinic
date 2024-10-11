@@ -4,6 +4,7 @@ import "./parts/tabs.js";
 // import "./parts/show-more.js";
 // import "./parts/popup.js";
 import "./parts/menu.js";
+import "./parts/search.js";
 // import { accorden } from "./static/accordeon.js";
 // import { animateAction, animateStaggerAction } from "./parts/animations.js";
 // import { runTicker } from "./static/ticker.js";

@@ -399,7 +399,15 @@ input[type="number"] {
             font-weight: 500;
             white-space: nowrap;
 
-            & > .active {
+            transition: color 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $dark-blue;
+                }
+            }
+
+            &.active {
                 color: $dark-blue;
             }
         }
@@ -520,6 +528,52 @@ input[type="number"] {
                     }
                 }
             }
+        }
+    }
+}
+
+.pages-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    z-index: 10;
+    display: block;
+    max-width: 400px;
+
+    .open {
+        display: none;
+    }
+
+    &._active {
+        .open {
+            display: block;
+        }
+        .close {
+            display: none;
+        }
+        ul {
+            display: none;
+        }
+    }
+
+    button {
+        font-size: 12px;
+        padding: 5px;
+        color: red;
+        background-color: $black;
+    }
+
+    ul {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        max-height: 500px;
+
+        li {
+            padding: 5px;
+            border-bottom: 1px solid $black;
         }
     }
 }

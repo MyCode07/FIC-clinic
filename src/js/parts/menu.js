@@ -106,3 +106,12 @@ document.addEventListener('click', function (e) {
     }
 })
 
+
+
+const pagesMenu = document.querySelector('.pages-menu');
+const pagesMenuButton = document.querySelector('.pages-menu button');
+
+pagesMenuButton.addEventListener('click', function () {
+    pagesMenu.classList.toggle('_active');
+
+})
