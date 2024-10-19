@@ -13,10 +13,10 @@ if (burger) {
         burger.classList.toggle('_active');
 
         if (menu.classList.contains('_open')) {
-            // lockPadding();
+            lockPadding();
         }
         else {
-            // unLockPadding();
+            unLockPadding();
         }
     })
 }
@@ -44,7 +44,7 @@ if (allMenuLinks.length) {
 
 
 // menu arrow buttom
-const arrow = `<button><svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M15.1421 1L8.07107 8.07107L1 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+const arrow = `<button><svg width="16" height="10" viewBox="0 0 16 10"  xmlns="http://www.w3.org/2000/svg"> <path d="M15.1421 1L8.07107 8.07107L1 1"  stroke-width="1.5" stroke-linecap="round"/></svg>
 </button>`;
 
 // add menu summenu opener button
@@ -95,14 +95,6 @@ document.addEventListener('click', function (e) {
 
     if (!targetEl.closest('li[data-open]') && !targetEl.closest('nav') && document.querySelector('li[data-open]')) {
         document.querySelector('li[data-open]').removeAttribute('data-open')
-    }
-
-    if (targetEl.classList.contains('header__lang')) {
-        targetEl.classList.toggle('_active');
-    }
-
-    if (!targetEl.closest('header__lang') && !targetEl.classList.contains('header__lang') && document.querySelector('.header__lang._active')) {
-        document.querySelector('.header__lang._active').classList.remove('_active')
     }
 })
 
