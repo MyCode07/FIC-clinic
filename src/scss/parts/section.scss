@@ -24,7 +24,8 @@ section {
         pointer-events: none;
         z-index: -1;
 
-        img {
+        img,
+        picture {
             height: 100%;
         }
     }
@@ -87,7 +88,8 @@ section {
                 height: 356px;
             }
 
-            img {
+            img,
+            picture {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -311,7 +313,8 @@ section {
             border: 1px solid #cfe4f1;
             background-color: $white;
 
-            img {
+            img,
+            picture {
                 height: 273px;
                 @media (max-width: 1024px) {
                     height: 150px;
@@ -331,7 +334,8 @@ section {
     .fullscreen-image {
         height: 530px;
 
-        img {
+        img,
+        picture {
             height: 100%;
             object-fit: cover;
         }
@@ -339,5 +343,39 @@ section {
         @media (max-width: 1024px) {
             height: 200px;
         }
+    }
+}
+
+.error-404 {
+    * {
+        text-align: center;
+    }
+
+    .hero__content {
+        max-width: none;
+    }
+
+    h1 {
+        @include adaptive-value("font-size", 128, 60, 1);
+        color: $blue;
+        margin-bottom: 15px !important;
+
+        span {
+            color: $dark-blue;
+            display: block;
+            @include adaptive-value("font-size", 32, 20, 1);
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+    }
+
+    p {
+        font-weight: 500;
+    }
+
+    a {
+        margin-inline: auto;
+        margin-top: 30px;
     }
 }

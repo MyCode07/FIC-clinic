@@ -65,7 +65,8 @@
         flex: 1 1 auto;
         height: 100%;
 
-        img {
+        img,
+        picture {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -153,7 +154,8 @@
             height: 300px;
         }
 
-        img {
+        img,
+        picture {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -193,7 +195,8 @@
                 height: 300px;
             }
 
-            img {
+            img,
+            picture {
                 width: 100%;
                 height: 100%;
                 object-fit: contain;

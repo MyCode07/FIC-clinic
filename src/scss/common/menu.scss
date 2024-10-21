@@ -26,32 +26,21 @@
         margin-bottom: 60px;
 
         ul {
+            display: flex;
+            flex-direction: column;
+
             li {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+
                 a {
                     color: $black;
                     font-size: 15px;
                     font-weight: 500;
-                    text-transform: uppercase;
                     transition: opacity 0.3s ease 0s;
-                }
-
-                @media (any-hover: hover) {
-                    &:hover {
-                        & > a {
-                            opacity: 0.5;
-                        }
-
-                        button {
-                            img,
-                            svg {
-                                transform: rotate(180deg);
-                            }
-                        }
-
-                        .div {
-                            pointer-events: all;
-                        }
-                    }
                 }
 
                 button {
@@ -76,6 +65,26 @@
                         margin-left: auto;
                     }
                 }
+
+                &[data-open] {
+                    & > button {
+                        img,
+                        svg {
+                            transform: rotate(-180deg);
+                            stroke: $blue;
+                        }
+                    }
+
+                    & > a {
+                        color: $blue;
+                    }
+
+                    & > ul {
+                        opacity: 1;
+                        pointer-events: all;
+                        display: flex;
+                    }
+                }
             }
         }
 
@@ -85,16 +94,15 @@
             align-items: center;
             justify-content: space-between;
 
-            & > li {
-                position: relative;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                width: 100%;
-                align-items: center;
-                padding: 10px 0;
+            ul {
+                padding-left: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
 
-                border-bottom: 1px solid $black;
+            & > li {
+                padding: 10px 0;
+                border-bottom: 1px solid rgba($color: $black, $alpha: 0.3);
 
                 a {
                     white-space: nowrap;
@@ -103,36 +111,19 @@
                     width: calc(100% - 35px);
                 }
 
-                &[data-open] {
-                    button {
-                        img,
-                        svg {
-                            transform: rotate(-180deg);
-                        }
-                    }
-
-                    div {
-                        overflow: visible;
-                        opacity: 1;
-                        pointer-events: all;
-                        visibility: visible;
-                        max-height: fit-content;
-                        height: auto;
-                    }
-                }
-
-                & > div {
-                    height: auto;
-                    pointer-events: none;
-                    height: 0;
-                    overflow: hidden;
+                ul {
                     z-index: 2;
                     width: 100%;
+                    display: none;
 
-                    & > ul {
+                    & > :not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+
+                    ul {
                         display: flex;
                         flex-direction: column;
-                        padding: 15px 0 0px 15px;
+                        display: none;
 
                         & > li {
                             display: flex;
@@ -140,7 +131,6 @@
                             flex-wrap: wrap;
                             width: 100%;
                             position: relative;
-                            padding: 10px 0;
 
                             button {
                                 svg {
@@ -150,28 +140,6 @@
 
                             a {
                                 white-space: wrap;
-                            }
-
-                            & > div {
-                                pointer-events: none;
-                                height: 0;
-                                overflow: hidden;
-                                z-index: 2;
-                                width: 100%;
-
-                                & > ul {
-                                    display: flex;
-                                    flex-direction: column;
-
-                                    li {
-                                        padding: 10px 0 10px 15px;
-
-                                        a {
-                                            white-space: wrap;
-                                            width: 100%;
-                                        }
-                                    }
-                                }
                             }
                         }
                     }

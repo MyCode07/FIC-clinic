@@ -577,3 +577,27 @@ input[type="number"] {
         }
     }
 }
+
+._nav {
+    display: block;
+    position: fixed;
+    z-index: 1000000;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5em;
+}
+
+.nav-pages {
+    margin-inline: auto;
+    @include adaptive-value("padding", 100, 30, 1);
+    max-width: 900px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    gap: 20px;
+
+    font-weight: 500;
+}
