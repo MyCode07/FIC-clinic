@@ -229,11 +229,6 @@ section {
 
 .doctors {
     background-color: #ecf0f4;
-    margin-top: 60px;
-
-    @media (max-width: 1024px) {
-        margin-top: 40px;
-    }
 
     .section__body {
         padding: 60px 0;

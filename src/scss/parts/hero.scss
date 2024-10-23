@@ -89,6 +89,7 @@
         gap: 0;
         position: relative;
 
+        picture:has(.bgi),
         .bgi {
             position: absolute;
             left: 50%;
@@ -115,7 +116,8 @@
             padding: 40px 20px;
         }
 
-        img {
+        img,
+        picture {
             position: absolute;
             left: 0;
             top: 0;
