@@ -1,4 +1,26 @@
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: $white;
+
+    &._sticky {
+        @media (min-width: 769px) {
+            .header__logo {
+                a {
+                    width: 65px;
+                }
+                span {
+                    font-size: 12px;
+                }
+            }
+
+            .header__search {
+                align-self: center;
+            }
+        }
+    }
+
     // .header__container
 
     &__container {
@@ -55,6 +77,8 @@
         a {
             width: 117px;
             @include adaptive-value("width", 117, 60, 1);
+
+            transition: width 0.3s ease 0s;
         }
 
         span {
@@ -62,6 +86,8 @@
             @include adaptive-value("font-size", 17, 10, 1);
             font-weight: 500;
             text-transform: uppercase;
+
+            transition: font-size 0.3s ease 0s;
         }
     }
 
