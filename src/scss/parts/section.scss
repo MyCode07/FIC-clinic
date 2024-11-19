@@ -374,3 +374,21 @@ section {
         margin-top: 30px;
     }
 }
+
+.pediatrician {
+    background-color: #ecf0f4;
+    padding-bottom: 60px;
+
+    @media (max-width: 1024px) {
+        padding-bottom: 40px;
+    }
+
+    .grid {
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
