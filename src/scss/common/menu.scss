@@ -168,3 +168,9 @@
         }
     }
 }
+
+body:has(.header._sticky) .menu {
+    @media (min-width: 769px) {
+        @include adaptive-value("top", 70, 70, 1);
+    }
+}

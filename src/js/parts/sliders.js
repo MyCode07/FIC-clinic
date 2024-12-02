@@ -90,6 +90,7 @@ if (sliders.length) {
                     prevEl: prev,
                     nextEl: next,
                 },
+                initialSlide: 1,
                 pagination: {
                     el: pagination,
                     type: 'bullets',
@@ -112,30 +113,68 @@ if (sliders.length) {
             })
         }
         if (slider.closest('.doctors')) {
-            new Swiper(slider, {
-                modules: [Autoplay, Scrollbar],
-                slidesPerView: 4,
-                spaceBetween: 20,
-                scrollbar: {
-                    el: ".swiper-scrollbar",
-                    hide: true,
-                },
-                breakpoints: {
-                    300: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
 
+            if (slider.closest('.history-doctors')) {
+                new Swiper(slider, {
+                    modules: [Autoplay, Scrollbar],
+                    slidesPerView: 6,
+                    spaceBetween: 20,
+                    scrollbar: {
+                        el: ".swiper-scrollbar",
+                        hide: true,
                     },
-                    500: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
+                    breakpoints: {
+                        300: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        500: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        769: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        1025: {
+                            slidesPerView: 4,
+                        },
+                        1201: {
+                            slidesPerView: 6,
+                        },
+                    }
+                })
+            } else {
+                new Swiper(slider, {
+                    modules: [Autoplay, Scrollbar],
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                    scrollbar: {
+                        el: ".swiper-scrollbar",
+                        hide: true,
                     },
-                    1025: {
-                        slidesPerView: 4,
-                    },
-                }
-            })
+                    breakpoints: {
+                        300: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        500: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        769: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        1025: {
+                            slidesPerView: 4,
+                        },
+                    }
+                })
+            }
+
         }
+
     })
 }
 

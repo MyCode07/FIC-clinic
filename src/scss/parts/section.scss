@@ -2,9 +2,11 @@
 section {
     position: relative;
     padding-top: 60px;
+    padding-bottom: 60px;
 
     @media (max-width: 1024px) {
         padding-top: 40px;
+        padding-bottom: 40px;
     }
 
     &._pt-0 {
@@ -47,7 +49,7 @@ section {
         justify-content: space-between;
         gap: 20px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             flex-direction: column;
         }
 
@@ -91,7 +93,7 @@ section {
             img,
             picture {
                 width: 100%;
-                height: 100%;
+                height: auto;
                 object-fit: cover;
             }
         }
@@ -105,18 +107,6 @@ section {
 
 .consultations {
     background-color: #ecf0f4;
-    margin-top: 60px;
-
-    @media (max-width: 1024px) {
-        margin-top: 40px;
-    }
-
-    .section__body {
-        padding: 60px 0;
-        @media (max-width: 1024px) {
-            padding: 30px 0;
-        }
-    }
 
     .navigation {
         margin-top: 30px;
@@ -142,14 +132,16 @@ section {
             * {
                 color: $white;
             }
+        }
 
-            .h2,
-            h2 {
-                margin-bottom: 0 !important;
-            }
+        .h2,
+        h2 {
+            margin-bottom: 0 !important;
         }
 
         & > :nth-child(3) {
+            background-color: #ecf5ff;
+
             @media (min-width: 1025px) {
                 grid-column: span 2;
             }
@@ -157,6 +149,14 @@ section {
             @media (max-width: 768px) {
                 grid-column: span 2;
             }
+        }
+
+        & > :nth-child(4) {
+            background-color: #cfe4f1;
+        }
+
+        & > :nth-child(5) {
+            background-color: #ecf5ff;
         }
     }
 }
@@ -169,17 +169,6 @@ section {
 
 .contacts {
     background-color: $light-blue;
-    margin-top: 60px;
-
-    @media (max-width: 1024px) {
-        margin-top: 40px;
-    }
-
-    padding: 60px 0;
-
-    @media (max-width: 1024px) {
-        padding: 30px 0;
-    }
 
     * {
         color: $white;
@@ -209,6 +198,14 @@ section {
             height: 100%;
         }
     }
+
+    a {
+        @media (any-hover: hover) {
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
 }
 
 .gallery {
@@ -219,6 +216,43 @@ section {
         @media (max-width: 1024px) {
             width: 100%;
             height: 300px;
+        }
+    }
+
+    .section__body {
+        position: relative;
+    }
+
+    @media (min-width: 1025px) {
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ecf0f4;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img,
+            svg {
+                width: 18px;
+                height: 8px;
+                flex: 0 0 auto;
+            }
+        }
+
+        .prev {
+            @include adaptive-value("left", 165, 0, 1);
+        }
+
+        .next {
+            @include adaptive-value("right", 165, 0, 1);
         }
     }
 
@@ -252,8 +286,14 @@ section {
         padding-bottom: 30px;
         margin-top: 40px;
     }
+
     * {
         color: $white;
+    }
+
+    p {
+        @include adaptive-value("font-size", 20, 16, 1);
+        font-weight: 400;
     }
 }
 
@@ -271,10 +311,9 @@ section {
         flex-direction: column;
         justify-content: center;
         padding: 0 !important;
-        width: 100%;
+        flex: 1 1 auto;
 
         @media (min-width: 1025px) {
-            max-width: 764px;
             width: 100%;
         }
 
@@ -299,6 +338,9 @@ section {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        max-width: 423px;
+        flex: 0 0 auto;
+        width: 100%;
 
         div {
             display: flex;
@@ -311,6 +353,7 @@ section {
             img,
             picture {
                 height: 273px;
+
                 @media (max-width: 1024px) {
                     height: 150px;
                 }
@@ -321,6 +364,23 @@ section {
                 font-size: 11px;
                 font-style: italic;
             }
+        }
+    }
+}
+
+.history-info {
+}
+
+.history-doctors {
+    .doctors-card {
+        padding: 20px;
+
+        &__image {
+            aspect-ratio: 1/1.16;
+        }
+
+        &__descr {
+            @include adaptive-value("font-size", 16, 16, 1);
         }
     }
 }
@@ -342,6 +402,11 @@ section {
 }
 
 .error-404 {
+    @include adaptive-value('padding-top', 180, 60, 1);
+    @include adaptive-value('padding-bottom', 180, 60, 1);
+    
+
+
     * {
         text-align: center;
     }
@@ -352,11 +417,11 @@ section {
 
     h1 {
         @include adaptive-value("font-size", 128, 60, 1);
-        color: $blue;
+        color: $light-blue;
         margin-bottom: 15px !important;
 
         span {
-            color: $dark-blue;
+            color:#000;
             display: block;
             @include adaptive-value("font-size", 32, 20, 1);
             text-transform: uppercase;
@@ -367,6 +432,7 @@ section {
 
     p {
         font-weight: 500;
+
     }
 
     a {
@@ -389,6 +455,18 @@ section {
         }
         @media (max-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+.documents.text-box {
+    a {
+        color: $black;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $light-blue;
+            }
         }
     }
 }

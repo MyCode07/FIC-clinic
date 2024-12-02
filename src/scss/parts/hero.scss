@@ -1,4 +1,7 @@
 .hero {
+    padding-top: 0;
+    padding-bottom: 0;
+
     // .hero__container
 
     &__container {
@@ -29,6 +32,7 @@
         max-width: 430px;
         width: 100%;
         @include adaptive-value("padding-top", 70, 30, 1);
+        flex: 0 0 auto;
 
         @media (max-width: 768px) {
             margin-bottom: 30px;
@@ -77,9 +81,14 @@
 
 .pages-hero {
     padding-top: 0 !important;
+    padding-bottom: 0 !important;
 
     h1 {
         padding: 60px 0;
+        color: $black;
+        font-weight: 500;
+
+        @include adaptive-value("font-size", 64, 30, 1);
 
         @media (max-width: 1024px) {
             padding: 30px 0;
@@ -101,6 +110,15 @@
             transform: translate(-50%, -50%);
             pointer-events: none;
             z-index: -1;
+        }
+    }
+
+    .fullscreen-image {
+        img,
+        picture,
+        figure {
+            max-height: 530px;
+            object-fit: cover;
         }
     }
 
@@ -206,5 +224,11 @@
                 pointer-events: none;
             }
         }
+    }
+}
+
+.how-get {
+    p {
+        color: #000;
     }
 }
