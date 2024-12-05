@@ -1,0 +1,136 @@
+@@include('./html/head.html', {
+"title":"Детские отделения",
+})
+
+@@include('./html/header.html')
+
+<div class="breadcrumbs">
+    <div class="_container">
+        <ul class="breadcrumb">
+            <li>
+                <a href="">
+                    <span>Клиника</span>
+                </a>
+                <div>/</div>
+            </li>
+            <li>
+                <a href="">
+                    <span>Стационар</span>
+                </a>
+                <div>/</div>
+            </li>
+            <li class="active"><span>Детские отделения</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<main>
+    <section class="section pages-hero ">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h1>Детские отделения</h1>
+                <div class="fullscreen-image">
+                    <img src="img/general-magnetic-therapy.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" data-tabs-area="">
+        <div class="section__container _container">
+            <div class="section__body">
+
+                <div class="tabs-content">
+                    <div>
+                        <div class="tabs tabs-secondary">
+                            <button data-tab="1" class="_active">Детские отделения</button>
+                            <button data-tab="2">Детское отделение</button>
+                            <button data-tab="3">Приёмное отделение</button>
+                        </div>
+
+                        <div data-tab-content="1" class="_active">
+                            <ul class="_directions">
+                                <li>
+                                    <a href=""><span>Отделение гастроэнтерологии, гепатологии и
+                                            диетотерапии</span><img src="img/icons/right-arrow.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><span>Отделение болезней обмена веществ и диетотерапии</span><img
+                                            src="img/icons/right-arrow.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><span>Отделение персонализированной диетотерапии</span><img
+                                            src="img/icons/right-arrow.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><span>Отделение энтерального питания с группой интенсивной
+                                            терапии</span><img src="img/icons/right-arrow.svg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><span>Отделение реабилитационной диетотерапии</span><img
+                                            src="img/icons/right-arrow.svg" alt=""></a>
+
+                                </li>
+                                <li>
+                                    <a href=""><span>Дневной стационар</span><img src="img/icons/right-arrow.svg"
+                                            alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div data-tab-content="2">
+                            <p>Взрослые отделения
+                                Детское отделение
+                                Приёмное отделение
+                                Отделение гастроэнтерологии, гепатологии и диетотерапии
+                                Отделение болезней обмена веществ и диетотерапии
+                                Отделение персонализированной диетотерапии
+
+                                Отделение энтерального питания с группой интенсивной терапии
+
+                                Отделение реабилитационной диетотерапии
+
+                                Дневной стационар
+                            </p>
+                        </div>
+                        <div data-tab-content="3">
+                            <p>Взрослые отделения
+                                Детское отделение
+                                Приёмное отделение
+                                Отделение гастроэнтерологии, гепатологии и диетотерапии
+                                Отделение болезней обмена веществ и диетотерапии
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section programms">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h2>отделения</h2>
+                <div class="grid grid-2">
+                    <div class="programms-card">
+                        <h4>Отделение педиатрической гастроэнтерологии, гепатологии и диетотерапии</h4>
+                    </div>
+                    <div class="programms-card">
+                        <h4>Отделение аллергологии и диетотерапии</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/gallery.html')
+
+    @@include('./html/consulting.html', {})
+
+    @@include('./html/contacts.html', {})
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

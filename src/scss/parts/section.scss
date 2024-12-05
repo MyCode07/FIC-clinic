@@ -209,6 +209,10 @@ section {
 }
 
 .gallery {
+    .swiper {
+        overflow: visible;
+    }
+
     .swiper-slide {
         width: 66.17%;
         height: 470px;
@@ -402,10 +406,8 @@ section {
 }
 
 .error-404 {
-    @include adaptive-value('padding-top', 180, 60, 1);
-    @include adaptive-value('padding-bottom', 180, 60, 1);
-    
-
+    @include adaptive-value("padding-top", 180, 60, 1);
+    @include adaptive-value("padding-bottom", 180, 60, 1);
 
     * {
         text-align: center;
@@ -421,7 +423,7 @@ section {
         margin-bottom: 15px !important;
 
         span {
-            color:#000;
+            color: #000;
             display: block;
             @include adaptive-value("font-size", 32, 20, 1);
             text-transform: uppercase;
@@ -432,7 +434,6 @@ section {
 
     p {
         font-weight: 500;
-
     }
 
     a {
@@ -466,6 +467,22 @@ section {
         @media (any-hover: hover) {
             &:hover {
                 color: $light-blue;
+            }
+        }
+    }
+}
+
+.search-grid {
+    .pagination {
+        margin-inline: auto;
+        margin-top: 40px;
+        width: fit-content;
+
+        a {
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $dark-blue;
+                }
             }
         }
     }
