@@ -472,18 +472,94 @@ section {
     }
 }
 
-.search-grid {
-    .pagination {
-        margin-inline: auto;
-        margin-top: 40px;
-        width: fit-content;
+.search {
+    // .search-grid
 
-        a {
-            @media (any-hover: hover) {
-                &:hover {
-                    color: $dark-blue;
+    &-grid {
+    }
+
+    // .search-hero
+
+    &-hero {
+        form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 40px;
+            width: 100%;
+            max-width: 690px;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 0;
+                width: 75%;
+                height: 1px;
+                background-color: #ecf0f4;
+
+                @media (max-width: 768px) {
+                    width: 60%;
+                }
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+                flex: 0 0 auto;
+            }
+
+            button {
+                height: 40px;
+            }
+
+            input {
+                flex: 1 1 auto;
+            }
+        }
+    }
+
+    // .search-page
+
+    &-page {
+        .pagination {
+            margin-inline: auto;
+            margin-top: 40px;
+            width: fit-content;
+
+            a {
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $dark-blue;
+                    }
                 }
             }
         }
+    }
+
+    // .search-item
+
+    &-item {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        a {
+            @include adaptive-value("font-size", 24, 20, 1);
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-top: 1em;
+        }
+
+        padding: 1em 0;
+        border-bottom: 1px solid #ecf0f4;
     }
 }
